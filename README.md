@@ -50,41 +50,41 @@ Follow these instructions exactly in order to build and run the convolution core
 
 2. Run the Full Flow
 
-Simply type: make
+    Simply type: make
 
-This will:
+   This will:
 
-   -Convert cameraman.png → input.hex (128 × 128 grayscale)
-
-   -Compile RTL & TB (simv)
-
-   -Simulate and produce output.hex
-
-   -Render output.hex → output.png
+     -Convert cameraman.png → input.hex (128 × 128 grayscale)
+  
+     -Compile RTL & TB (simv)
+  
+     -Simulate and produce output.hex
+  
+     -Render output.hex → output.png
 
 3. View the Result
 
-Open output.png in your image viewer to see the filtered output.
+      Open output.png in your image viewer to see the filtered output.
 
 4. Validate Against Software Reference
 
-       Run the Python validator:
+      Run the Python validator:
        
-       python3 validate_filter.py
+      python3 validate_filter.py
    
    A window will pop up showing:
    
-       Left: software-computed filter
+      Left: software-computed filter
    
-       Center: HDL result
+      Center: HDL result
    
-       Right: heat-map & red overlay of any pixel mismatches
+      Right: heat-map & red overlay of any pixel mismatches
 
 5. Swap in a different Filter or/and Image
 
-    To use Gaussian blur on the default image: make FILTER=blur
-
-    To sharpen your own photo: make FILTER=sharpen IMAGE=myphoto.png
-
-    You can also use any combination of filters and images you want.
+      To use Gaussian blur on the default image: make FILTER=blur
+  
+      To sharpen your own photo: make FILTER=sharpen IMAGE=myphoto.png
+  
+      You can also use any combination of filters and images you want.
 

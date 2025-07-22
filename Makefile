@@ -16,7 +16,7 @@ TB    = convolution_tb.v
 SIM   = simv             # εκτελέσιμο Icarus
 KDIR  = kernels
 
-# -- καθάρισε το FILTER από κρυφά CR / TAB / κενά ------------
+# -- Clear το FILTER από κρυφά CR / TAB / κενά ------------
 CR    := $(shell printf '\r')
 space :=
 space +=
